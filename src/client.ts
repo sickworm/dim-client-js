@@ -4,43 +4,6 @@ import * as core from 'dim-core-js'
 import { Socket } from './socket'
 import { ClientError, StateError } from './error'
 
-// class EmptyStation implements core.Station, core.TransceiverDelegate {
-//     identifier = mkm.ID.fromString("gsp-s001@x5Zh9ixt8ECr59XLye1y5WWfaX4fcoaaSC");
-//     host = "127.0.0.1"
-//     port = 9394
-//     publicKey = mkm.RsaPublicKey.fromPem(`
-//         -----BEGIN PUBLIC KEY-----
-//         MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCaLj4hou1yDaa+c3EYT5iOPI4O
-//         ks0aGXL8PLyaMZ6S62RmT6bOxNh6Q5fl0SozzheSMBkDaQl+y8Zeia+OW12T9dkg
-//         VKOYBIrJ6rqWPqNVj2GAWOybUtZSyDcFgeuKpD3/QX2xLcWOfzrg0aYCkYNQUyAv
-//         hr9I6B91DROWYQ9cEwIDAQAB
-//         -----END PUBLIC KEY-----
-//         `)
-
-//     async sendPackage(data: Buffer): Promise<void> {
-//     }
-
-//     async uploadFileData(data: Buffer, iMsg: dkd.InstantMessage): Promise<string> {
-//         return ""
-//     }
-    
-//     async downloadFileData(url: string, iMsg: dkd.InstantMessage): Promise<Buffer> {
-//         return Buffer.alloc(0)
-//     }
-
-//     didReceivePackage(data: Buffer, server: core.Station): void {
-
-//     }
-
-//     didSendPackage(data: Buffer, server: core.Station): void {
-
-//     }
-
-//     didFailToSendPackage(error: Error, data: Buffer, server: core.Station): void {
-
-//     }
-// }
-
 type OnReceiveContentListener = (content: dkd.Content) => void
 
 class Client {
